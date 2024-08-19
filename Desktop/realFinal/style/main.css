@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main {
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+#main > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 450px;
+  z-index: 0;
+}
+#btn-wrap {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  height: 250px;
+  top: 50%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#btn-wrap > button {
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Micro 5", sans-serif;
+  font-size: 35px;
+  border: 5px inset black;
+  border-radius: 5px;
+  background-color: rgb(49, 49, 49);
+}
+button > a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 300px;
+  height: 50px;
+}

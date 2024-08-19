@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+#main > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 450px;
+  z-index: 0;
+}
+
+#btn-wrap {
+  width: 450px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#btn-wrap > button {
+  display: block;
+  background-color: rgb(49, 49, 49);
+  height: 50px;
+  width: 200px;
+  border: none;
+
+  font-family: "Micro 5", sans-serif;
+  font-size: 30px;
+  border: 5px inset black;
+  border-radius: 5px;
+}
+#btn-wrap > button > a {
+  text-decoration: none;
+  color: white;
+}
+#btn-wrap > p {
+  color: white;
+}
+#level-title {
+  font-size: 70px;
+  font-weight: 700;
+  font-family: "Micro 5", sans-serif;
+  text-shadow: -8px 0px black, 0px 8px black, 8px 0px black, 0px -8px black;
+}
+#level-check {
+  position: relative;
+  font-family: "Sunflower", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+}
+#level-check > span {
+  position: absolute;
+  top: -1px;
+}

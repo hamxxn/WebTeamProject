@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap"
+      rel="stylesheet"
+    />
+    <title>벽돌깨기 게임</title>
+    <link rel="stylesheet" href="style/lvl1.css" />
+  </head>
+  
+  <body onclick="nextScenario()">
+    <header>
+      <div id="master_title"><h1></h1></div>
+      <img id="playbtn" src="img/soundbtn.png">
+    </header>
+    <div id="game-container">
+      <canvas id="gameCanvas" width="1000" height="650"></canvas>
+    </div>
+    <audio id="background-music" src="sound/mainbgm.mp3"></audio>
+    <script src="lvl1.js"></script>
+  </body>
+</html>

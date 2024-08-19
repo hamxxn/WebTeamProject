@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main {
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+#main > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 450px;
+  z-index: 0;
+}
+
+#setting-title {
+  position: relative;
+  z-index: 1;
+  top: 15px;
+  left: 10%;
+  height: 20px;
+  font-size: 60px;
+  color: white;
+  text-decoration: dotted;
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: -5px 0px black, 0px 5px black, 5px 0px black, 0px -5px black;
+}
+
+#setting-wrap {
+  position: absolute;
+  z-index: 1;
+  top: 130px;
+  left: 10%;
+  width: 350px;
+  height: 380px;
+  background-color: rgb(49, 49, 49);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.setting-main {
+  display: none;
+  width: 350px;
+  height: 400px;
+}
+body > input {
+  display: none;
+}
+#setting-wrap > label {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 23px;
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 30px;
+  top: -30px;
+  left: 0;
+  background-color: rgb(49, 49, 49);
+  color: #1a120b;
+  text-align: center;
+  line-height: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  transition: width 0.3s, height 0.3s, font-size 0.3s, top 0.3s;
+}
+
+#ball:checked ~ #main > #setting-wrap > label:nth-of-type(1) {
+  width: 120px;
+  height: 40px;
+  top: -40px;
+  line-height: 40px;
+  font-size: 30px;
+  color: white;
+}
+
+#ball:checked ~ #main > #setting-wrap > .setting-main:nth-of-type(1) {
+  display: block;
+}
+
+.setting-main > p {
+  padding-top: 20px;
+  padding-left: 15px;
+  font-family: "Micro 5", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+  color: white;
+}
+#color-wrap {
+  padding-left: 30px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 55px;
+}
+.color-label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  z-index: 1;
+  background-size: cover; /* Ensure the image covers the label */
+  background-position: center; /* Center the background image */
+}
+
+#color-wrap > input {
+  display: none;
+}
+/* 라디오 버튼이 체크되었을 때 해당하는 라벨에 테두리 적용 */
+#CDBB5B5:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="CDBB5B5"],
+#C01204E:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="C01204E"],
+#CFFA27F:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="CFFA27F"],
+#C799351:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="C799351"],
+#C15F5BA:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="C15F5BA"],
+#Cca8787:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cca8787"],
+#Ce1afd1:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Ce1afd1"],
+#C4a55a2:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="C4a55a2"],
+#C03aed2:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="C03aed2"],
+#Cc5dff8:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cc5dff8"],
+#Cbff6c3:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cbff6c3"],
+#Cffff80:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cffff80"],
+#Cwhite:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cwhite"],
+#Cred:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cred"],
+#Cblue:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cblue"],
+#Cblack:checked
+  ~ #main
+  > #setting-wrap
+  > .setting-main
+  > #color-wrap
+  > label[for="Cblack"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: 5px solid #0a6847;
+}
+
+#background,
+#ballsound {
+  width: 320px;
+  background: linear-gradient(
+    to right,
+    #0a6847 0%,
+    #0a6847 50%,
+    #ececec 50%,
+    #ececec 100%
+  );
+  border-radius: 8px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  accent-color: #0a6847;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+#background:active,
+#ballsound:active {
+  cursor: grabbing;
+}
+
+#background:focus,
+#ballsound:focus {
+  outline: none;
+}
+
+#backButton,
+#saveButton {
+  position: absolute;
+  bottom: 30px;
+  width: 100px;
+  height: 40px;
+  line-height: 30px;
+  font-family: "Micro 5", sans-serif;
+  font-size: 30px;
+  border: 5px inset black;
+  border-radius: 5px;
+  background-color: rgb(49, 49, 49);
+  color: #0a6847;
+}
+#saveButton {
+  right: 100px;
+}
+#backButton {
+  left: 100px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./style/setting.css" type="text/css" rel="stylesheet" />
+    <title>Setting</title>
+  </head>
+  <body>
+    <input type="radio" id="ball" name="tab" />
+    <input id="CDBB5B5" type="radio" name="color" />
+    <input id="C01204E" type="radio" name="color" />
+    <input id="CFFA27F" type="radio" name="color" />
+    <input id="C799351" type="radio" name="color" />
+
+    <input id="Cca8787" type="radio" name="color" />
+    <input id="Ce1afd1" type="radio" name="color" />
+    <input id="C4a55a2" type="radio" name="color" />
+    <input id="C03aed2" type="radio" name="color" />
+
+    <input id="Cc5dff8" type="radio" name="color" />
+    <input id="Cbff6c3" type="radio" name="color" />
+    <input id="Cffff80" type="radio" name="color" />
+    <input id="C15F5BA" type="radio" name="color" />
+
+    <input id="Cwhite" type="radio" name="color" checked />
+    <input id="Cred" type="radio" name="color" />
+    <input id="Cblue" type="radio" name="color" />
+    <input id="Cblack" type="radio" name="color" />
+
+    <div id="main">
+      <audio id="background-music" src="sound/mainbgm.mp3"></audio>
+      <img src="./img/setting.png" />
+      <p id="setting-title">setting</p>
+      <div id="setting-wrap">
+        <label for="ball">SET BALL</label>
+        <div class="setting-main">
+          <p>CHANGE BALL COLOR</p>
+          <div id="color-wrap">
+            <label
+              for="CDBB5B5"
+              class="color-label"
+              style="background-color: #dbb5b5"
+            ></label>
+            <label
+              for="Cca8787"
+              class="color-label"
+              style="background-color: #ca8787"
+            ></label>
+            <label
+              for="Ce1afd1"
+              class="color-label"
+              style="background-color: #e1afd1"
+            ></label>
+
+            <label
+              for="CFFA27F"
+              class="color-label"
+              style="background-color: #ffa27f"
+            ></label>
+            <label
+              for="C01204E"
+              class="color-label"
+              style="background-color: #01204e"
+            ></label>
+
+            <label
+              for="C4a55a2"
+              class="color-label"
+              style="background-color: #4a55a2"
+            ></label>
+            <label
+              for="C03aed2"
+              class="color-label"
+              style="background-color: #03aed2"
+            ></label>
+
+            <label
+              for="Cc5dff8"
+              class="color-label"
+              style="background-color: #c5dff8"
+            ></label>
+            <label
+              for="C799351"
+              class="color-label"
+              style="background-color: #799351"
+            ></label>
+            <label
+              for="Cbff6c3"
+              class="color-label"
+              style="background-color: #bff6c3"
+            ></label>
+            <label
+              for="Cffff80"
+              class="color-label"
+              style="background-color: #ffff80"
+            ></label>
+            <label
+              for="C15F5BA"
+              class="color-label"
+              style="background-color: #15f5ba"
+            ></label>
+
+            <label
+              for="Cwhite"
+              class="color-label"
+              style="background-color: white"
+            ></label>
+
+            <label
+              for="Cred"
+              class="color-label"
+              style="background-color: red"
+            ></label>
+            <label
+              for="Cblue"
+              class="color-label"
+              style="background-color: blue"
+            ></label>
+            <label
+              for="Cblack"
+              class="color-label"
+              style="background-color: black"
+            ></label>
+          </div>
+        </div>
+      </div>
+      <button id="backButton">Back</button>
+      <button id="saveButton">Save</button>
+    </div>
+    <script>
+      document
+        .getElementById("saveButton")
+        .addEventListener("click", function () {
+          // Get selected color
+          let selectedColor = document.querySelector(
+            'input[name="color"]:checked'
+          ).id;
+
+          // Save to localStorage
+          localStorage.setItem("ballColor", selectedColor);
+
+          alert("Settings saved!");
+        });
+
+      // Script to handle Back button
+      document
+        .getElementById("backButton")
+        .addEventListener("click", function () {
+          window.location.href = "main.html";
+        });
+
+      // Load settings from localStorage
+      window.onload = function () {
+        // Load color
+        let savedColor = localStorage.getItem("ballColor");
+        if (savedColor) {
+          document.getElementById(savedColor).checked = true;
+        }
+      };
+
+      document
+        .getElementById("play-button")
+        .addEventListener("click", function () {
+          var audio = document.getElementById("background-music");
+          audio.muted = false;
+          audio
+            .play()
+            .then(() => {
+              document.getElementById("overlay").style.display = "none";
+            })
+            .catch((error) => {
+              console.log("Audio playback issue: ", error);
+            });
+        });
+    </script>
+  </body>
+</html>

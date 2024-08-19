@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="./style/loginpage.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet" />
+  <title>Login</title>
+  <script>
+    function login() {
+      var name = document.getElementById('name').value;
+      var password = document.getElementById('password').value;
+
+      if (name && password) {
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userPassword', password);
+        alert('Login Successful');
+        setTimeout(function() {
+          window.location.href = 'main.html';
+        });
+      } else {
+        alert('Please enter both name and password.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="main">
+    <img src="./img/loginpage.png" />
+    <div id="login-wrap">
+      <p id="login-title">MINECRAFT</p>
+      <div class="input-wrap">
+        <input type="text" id="name" />
+        <label for="name">이름</label>
+      </div>
+      <div class="input-wrap">
+        <input type="password" id="password" />
+        <label for="password">비밀번호</label>
+      </div>
+      <button onclick="login()">로그인</button>
+    </div>
+  </div>
+</body>
+</html>
